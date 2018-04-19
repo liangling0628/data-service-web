@@ -1,5 +1,6 @@
 {
   "name": "my-pc-app",
+  "author": "lingliang1100@gmail.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
