@@ -1,9 +1,19 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
-import YDKF from '../container/ydkf';
-import YDYF from '../container/ydyf';
-import YDZJ from '../container/ydzj';
+const YDKF = Loadable({
+  loader: () => import('../container/ydkf'),
+  loading: () => <div>loading...</div>
+});
+const YDYF = Loadable({
+  loader: () => import('../container/ydyf'),
+  loading: () => <div>loading...</div>
+});
+const YDZJ = Loadable({
+  loader: () => import('../container/ydzj'),
+  loading: () => <div>loading...</div>
+});
 
 const Routes = () => {
   return (

@@ -1,5 +1,5 @@
 const _host_name = 'https://apple.myysq.com.cn/bms';
-
+const _host_name_ = 'http://localhost:9000';
 class Service {
   // 获取登入的用户信息
   static _get_login_data = `${_host_name}/Organization/layout/get-login-info`;
