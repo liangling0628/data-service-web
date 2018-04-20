@@ -19,10 +19,10 @@ const Routes = () => {
   return (
     <div>
       {/*<Switch>*/}
-      <Route exact path="/ydkf" component={YDKF} />
-      <Route exact path="/ydzj" component={YDZJ} />
-      <Route exact path="/ydyf" component={YDYF} />
-      <Route exact path="/" component={YDYF} />
+      <Route path="/ydkf" component={YDKF} />
+      <Route path="/ydzj" component={YDZJ} />
+      <Route path="/ydyf" component={YDYF} />
+      <Route path="/" component={YDKF} />
       {/*</Switch>*/}
     </div>
   );

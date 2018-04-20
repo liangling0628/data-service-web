@@ -1,7 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import LayoutContent from '../LayoutContent/index';
 const YDYF = () => {
-    return (<div>移动验房</div>)
-}
+  return (
+    <div>
+      <LayoutContent />
+    </div>
+  );
+};
 
-export default YDYF
+export default YDYF;

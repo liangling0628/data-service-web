@@ -31,8 +31,12 @@ class HeaderWebMenu extends Component {
             return (
               <li
                 onClick={() => this.setStateHandle('selectIndex', index)}
-                onMouseEnter={() => this.setStateHandle('list_show', true)}
-                onMouseLeave={() => this.setStateHandle('list_show', false)}
+                onMouseEnter={() =>
+                  index == 6 && this.setStateHandle('list_show', true)
+                }
+                onMouseLeave={() =>
+                  index == 6 && this.setStateHandle('list_show', false)
+                }
                 key={item.app_code}
                 className={this.state.selectIndex === index ? 'on' : ''}
               >
