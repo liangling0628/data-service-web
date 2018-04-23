@@ -6,7 +6,6 @@ import './index.less';
 class ScreenContent extends React.Component {
   render() {
     const { match, dmp_list } = this.props;
-    console.log(dmp_list);
     return (
       <div>
         {match.params.screen === 'singleScreen' ? (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import './index.less';
 
 const LayoutContent = ({ match, location, children }) => {
@@ -9,9 +8,9 @@ const LayoutContent = ({ match, location, children }) => {
       <div className="common-panel">
         <div className="panel-title clearfix">
           {children ? (
-            <Button bsStyle="primary" className="btn-120-w pull-right">
+            <span className="btn btn-primary btn-120-w pull-right">
               设置大屏
-            </Button>
+            </span>
           ) : (
             ''
           )}

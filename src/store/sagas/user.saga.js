@@ -17,13 +17,16 @@ export function* get_user_info() {
       yield put(set_login_data(user_data.data));
     } else {
       yield put(set_login_out());
+      return false;
     }
     if (nav_data.status && nav_data.data) {
       yield put(set_navigation_data(nav_data.data));
     } else {
       yield put(set_login_out());
+      return false;
     }
   } catch (err) {
     yield put(set_login_out());
+    return false;
   }
 }
