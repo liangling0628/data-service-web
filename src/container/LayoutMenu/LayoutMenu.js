@@ -2,9 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const menu_data = [
-  { id: 'ydkf', name: '移动客服', url: '/ydkf' },
-  { id: 'ydzj', name: '移动质检', url: '/ydzj' },
-  { id: 'ydyf', name: '移动验房', url: '/ydyf' }
+  {
+    id: 'ydkf',
+    name: '移动客服',
+    url: '/ydkf',
+    defaultUrl: '/ydkf/singleScreen'
+  },
+  { id: 'ydzj', name: '移动质检', url: '/ydzj', defaultUrl: '/ydzj' },
+  {
+    id: 'ydyf',
+    name: '移动验房',
+    url: '/ydyf',
+    defaultUrl: '/ydyf/singleScreen'
+  }
 ];
 
 class LayOutMenu extends React.Component {
@@ -23,6 +33,10 @@ class LayOutMenu extends React.Component {
     return (
       <div className="manage-menu">
         <dl>
+          <dt>
+            <span className="module-icon  align-m module-statistics" />
+            <span className="align-m">数据服务</span>
+          </dt>
           {menu_data.map((item, index) => {
             return (
               <dd
@@ -32,7 +46,7 @@ class LayOutMenu extends React.Component {
                 onClick={() => this.selectHandle(index)}
                 key={item.id}
               >
-                <Link to={item.url}>{item.name}</Link>
+                <Link to={item.defaultUrl}>{item.name}</Link>
               </dd>
             );
           })}

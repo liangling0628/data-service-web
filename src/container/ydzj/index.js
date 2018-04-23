@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import LayoutContent from '../LayoutContent/index';
 
 const YDZJ = () => {
-    return (<div>移动质检</div>)
-}
+  return (
+    <div>
+      <LayoutContent {...this.props} />
+    </div>
+  );
+};
 
-export default YDZJ
+export default YDZJ;
